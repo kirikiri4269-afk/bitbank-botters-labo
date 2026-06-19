@@ -1,0 +1,40 @@
+# ==============================================================
+# requirements.txt
+# install: pip install -r requirements.txt
+# ==============================================================
+
+# --- コアデータ処理 ---
+numpy
+pandas
+pyarrow                  # Parquet 読み書き
+
+# --- バックテストエンジン ---
+vectorbt                  # numpy/pandas の対応バージョンは pip が自動解決
+
+# --- データ取得 ---
+ccxt                      # 仮想通貨（Binance等）
+requests                  # J-Quants REST API
+aiohttp                   # 非同期 HTTP（モニター系）
+MetaTrader5               # MT5からの価格データ取得（Windows専用）
+
+# --- 設定・環境変数 ---
+python-dotenv             # .env ファイルの読み込み
+pyyaml                    # config.yaml の読み込み
+
+# --- テクニカル指標 ---
+pandas-ta                 # SMA/BB等の指標計算（.ta アクセサ）
+
+# --- 日本カレンダー ---
+jpholiday                 # 日本の祝日判定（振替休日含む）
+
+# --- 可視化 ---
+matplotlib                # グラフ描画
+japanize_matplotlib        # matplotlib 日本語フォント対応
+
+# --- 開発・分析補助 ---
+jupyterlab                # notebooks/ での探索的分析
+ipywidgets                # Jupyter インタラクティブ UI
+pytest                    # tests/ のユニットテスト
+
+
+

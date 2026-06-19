@@ -1,0 +1,74 @@
+{
+  "generated_at": "2026-06-18T08:11:58.796594+00:00",
+  "config": {
+    "curve_start_day": 14,
+    "curve_end_day": 59,
+    "month1_end_day": 29,
+    "month2_end_day": 59,
+    "worst_n": 20,
+    "min_obs": 20,
+    "window_bins": [
+      14,
+      30,
+      60,
+      90,
+      120,
+      150,
+      180
+    ],
+    "window_labels": [
+      "14-29",
+      "30-59",
+      "60-89",
+      "90-119",
+      "120-149",
+      "150-179"
+    ],
+    "early_windows": [
+      "30-59",
+      "60-89"
+    ],
+    "late_windows": [
+      "120-149",
+      "150-179"
+    ],
+    "win_rate_threshold_pct": 55.0,
+    "input_source": "csv:homework_input"
+  },
+  "final_decision_payload": {
+    "verdict": "棄却",
+    "verdict_human": "仮説は支持されず（上場直後優位を恒常的とは判断できない）",
+    "target_hypothesis": "上場直後（early=30-89日）の方が後半（late=120-179日）より有利",
+    "input_source": "csv:homework_input",
+    "symbols_total": 362,
+    "symbols_non_censored": 303,
+    "curve_window": "event_day 14-59",
+    "worst_definition": "sharpe_net下位20銘柄",
+    "median_diff_s_nc": 0.015600150060902984,
+    "win_rate_diff_s_nc": 50.16835016835017,
+    "sign_test_pvalue_s_nc": 0.5,
+    "win_rate_threshold_pct": 55.0,
+    "rule1_median_diff_positive": true,
+    "rule2_win_rate_reached": false,
+    "robust_positive": false,
+    "reasons": [
+      "上場初期が優位だった銘柄割合が基準未達（実測 50.17% < 基準 55%）"
+    ],
+    "not_confirmed": [
+      "未確認: walk-forwardのOOS検証で同結論か",
+      "未確認: FRコスト込み実現PnLで同結論か",
+      "未確認: 流動性・ボラ統制後も同結論か"
+    ]
+  },
+  "files": {
+    "input_summary": "homework_input_summary.csv",
+    "input_daily": "homework_input_daily.csv",
+    "curve_eventday_summary": "altcoin_basis_hw_post_listing_curve_14_59_eventday_summary.csv",
+    "curve_symbol_daily": "altcoin_basis_hw_post_listing_curve_14_59_symbol_daily.csv",
+    "curve_symbol_month": "altcoin_basis_hw_post_listing_curve_14_59_symbol_month.csv",
+    "window_symbol_metrics": "altcoin_basis_hw_post_listing_window_symbol_metrics.csv",
+    "window_summary": "altcoin_basis_hw_post_listing_window_summary.csv",
+    "paired_diff": "altcoin_basis_hw_post_listing_paired_diff.csv",
+    "worst_diagnostics": "altcoin_basis_hw_worst_diagnostics.csv"
+  }
+}
